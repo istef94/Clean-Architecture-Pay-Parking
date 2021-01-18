@@ -1,0 +1,18 @@
+
+Application.UnitTests/bin/*
+.vs/*
+Application/bin/Debug/*
+Application.UnitTests/obj/*
+Domain.UnitTests/bin/Debug/*
+Infrastructure/obj/Debug/*
+Pay Parking/bin/Debug/*
+Pay Parking/obj/Debug/*
+Pay Parking/obj/*
+Domain/obj/Debug/*
+Infrastructure/bin/Debug/*
+Domain/bin/Debug/*
+Domain.UnitTests/obj/*
+Application/obj/Debug/*
+Application/obj/*
+Domain/obj/*
+Infrastructure/obj/*
