@@ -7,8 +7,7 @@ using Domain.Utils;
 using Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections;
-using System.Collections.Generic;
+
 
 namespace Presentation
 {
@@ -16,7 +15,7 @@ namespace Presentation
     {
         static void Main(string[] args)
         {
-            //setup our Dependen
+            //setup our Dependeny Injection
             var serviceProvider = new ServiceCollection()
                 .AddTransient<IDateTimeCalculation, DateTimeCalculation>()
                 .AddTransient<IPriceCalculation, PriceCalculation>()
