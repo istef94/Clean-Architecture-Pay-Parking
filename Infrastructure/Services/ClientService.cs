@@ -12,30 +12,12 @@ namespace Infrastructure.Services
     {
         public List<ParkingSlot> SeeListOfAvailableSlots(Parking parking)
         {
-            var availableParkingSlots = new List<ParkingSlot>();
-            foreach (var slot in parking.ParkingSlots)
-            {
-                if (slot.ParkedCar == null)
-                {
-                    availableParkingSlots.Add(slot);
-                }
-            }
-
-            return availableParkingSlots;
+            return parking.ParkingSlots.Where(x => x.ParkedCar == null).ToList();
         }
 
         public List<ParkingSlot> SeeListOfParkedCars(Parking parking)
         {
-            var listOfParkedCars = new List<ParkingSlot>();
-            foreach (var slot in parking.ParkingSlots)
-            {
-                if (slot.ParkedCar != null)
-                {
-                    listOfParkedCars.Add(slot);
-                }
-            }
-
-            return listOfParkedCars;
+            return parking.ParkingSlots.Where(x => x.ParkedCar != null).ToList();
         }
     }
 }
