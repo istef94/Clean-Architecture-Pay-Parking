@@ -31,7 +31,7 @@ namespace Infrastructure.Services
             parking.ParkingSlots[slotNumber].ParkedCar = car;
             parking.ParkingSlots[slotNumber].ParkedOn = DateTime.Now;
 
-            Console.WriteLine($"Car {car.CarNumber} was parketd on slot {slotNumber} successfully");
+            Console.WriteLine($"Car {car.CarNumber} was parked on slot {slotNumber} successfully");
         }
 
         public void ExitFromTheParking(Parking parking, int slotNumber)
