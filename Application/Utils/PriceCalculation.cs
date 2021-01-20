@@ -12,15 +12,10 @@ namespace Application.Utils
     {
         public double GetParkingPriceByTotalHours(int hours)
         {
-            double totalPrice = 0;
-
             if (hours > 0)
-            {
-                totalPrice += (double)HourlyPrice.OneHour;
-                totalPrice += (double)HourlyPrice.MoreThenOneHour * (hours - 1);
-            }
-
-            return totalPrice;
+                return (double)HourlyPrice.OneHour + (double)HourlyPrice.MoreThenOneHour * (hours - 1);
+            else
+                return 0;
         }
     }
 }
