@@ -43,9 +43,9 @@ namespace Infrastructure.Services
                 throw new ExitFromparkingException();
 
             int totalHours = _dateTimeCalculation.GetRoundedHoursBetweenTwoDates(parkedOnSlot.ParkedOn, currentTime);
-            var toPayForParking = _priceCalculation.GetParkingPriceByTotalHours(totalHours);
+            var parkingPrice = _priceCalculation.GetParkingPriceByTotalHours(totalHours);
 
-            Console.WriteLine($"You have to pay {toPayForParking} Lei for car {parkedOnSlot.ParkedCar.CarNumber}");
+            Console.WriteLine($"You have to pay {parkingPrice} Lei for car {parkedOnSlot.ParkedCar.CarNumber}");
 
             parking.ParkingSlots[slotNumber].ParkedCar = null;
 
