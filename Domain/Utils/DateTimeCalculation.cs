@@ -7,16 +7,12 @@ using System.Threading.Tasks;
 
 namespace Domain.Utils
 {
-    public class DateTimeCalculation: IDateTimeCalculation
+    public class DateTimeCalculation : IDateTimeCalculation
     {
         public int GetRoundedHoursBetweenTwoDates(DateTime firstDate, DateTime secondDate)
         {
-            var parketMinutes = Math.Abs((secondDate - firstDate).Minutes);
-            int totalHours = parketMinutes / 60;
-            if (parketMinutes % 60 > 0)
-                totalHours++;
-
-            return totalHours;
+            return Math.Abs((secondDate - firstDate).Minutes) / 60 + 
+                   Math.Abs((secondDate - firstDate).Minutes) % 60 > 0 ? 1 : 0;
         }
 
     }
