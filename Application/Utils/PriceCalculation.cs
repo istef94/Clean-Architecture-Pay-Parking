@@ -14,7 +14,7 @@ namespace Application.Utils
         {
             double totalPrice = 0;
 
-            if (hours >= 1)
+            if (hours > 0)
             {
                 totalPrice += (double)HourlyPrice.OneHour;
                 totalPrice += (double)HourlyPrice.MoreThenOneHour * (hours - 1);
